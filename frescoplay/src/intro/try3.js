@@ -17,6 +17,25 @@ class App extends React.Component {
     this.setState({count:currVal});
   }
 
+  //LIFECYCLE METHODS
+  componentDidMount()
+  {
+    console.log("Calling componentDidMount");
+  }
+
+  componentWillMount(){
+    console.log("calling componentWillMount");
+  }
+
+  componentDidUpdate(){
+    console.log("calling componentDidUpdate");
+  }
+
+  componentWillUpdate(){
+    console.log("calling componentWillUpdate");
+  }
+
+
   render(){
     return(
       <div>
