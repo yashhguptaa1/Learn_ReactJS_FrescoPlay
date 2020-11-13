@@ -2,12 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import Layout from './intro/client';
+import Layout from './intro/statesAndProps';
+import HouseFull from './intro/try';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Layout />
+    <HouseFull />
   </React.StrictMode>,
   document.getElementById('root')
 );
