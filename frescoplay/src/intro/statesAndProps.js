@@ -1,7 +1,3 @@
-//three ways to work with data
-//props
-//states
-//context
 import React from 'react';
 import Header from './header';
 
@@ -12,14 +8,20 @@ class Layout extends React.Component {
         //state is null by default
         this.state = { title:"Welcome" };
     }
-    render() { 
 
-        setTimeout(()=>{
-            this.setState({title:"Welcome Bob"});
-        },2000)
+    changeTitle(title)
+    {
+        //this.setState({title:title})
+        //SAME AS ABOVE CAUZ OF ES6
+        this.setState({title})
+    }
+
+    //if you dont bind the function it will be considered as being called by Header component
+    //by binding we ensure it is being called by Layout component
+    render() { 
         return (
         <div>
-            <Header title={this.state.title}/>
+            <Header changeTitle={this.changeTitle.bind(this)} title={this.state.title}/>
         </div>
             );
     }
